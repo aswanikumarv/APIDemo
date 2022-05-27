@@ -13,6 +13,14 @@
 		CF9CFEEF283F9595004054E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9CFEED283F9595004054E0 /* Main.storyboard */; };
 		CF9CFEF1283F9597004054E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF9CFEF0283F9597004054E0 /* Assets.xcassets */; };
 		CF9CFEF4283F9597004054E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF9CFEF2283F9597004054E0 /* LaunchScreen.storyboard */; };
+		CF9CFF01283F975B004054E0 /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9CFF00283F975B004054E0 /* ProfileTableViewCell.swift */; };
+		CF9CFF04283F976B004054E0 /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF9CFF03283F976B004054E0 /* ProfileTableViewCell.xib */; };
+		CF9CFF07283F97A3004054E0 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9CFF06283F97A3004054E0 /* ProfileViewModel.swift */; };
+		CF9CFF0C283F97F9004054E0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9CFF0B283F97F9004054E0 /* NetworkManager.swift */; };
+		CF9CFF0F283F9804004054E0 /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9CFF0E283F9804004054E0 /* ProfileService.swift */; };
+		CF9CFF13283F99E5004054E0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9CFF12283F99E5004054E0 /* Extensions.swift */; };
+		CF9CFF16283F9A84004054E0 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9CFF15283F9A84004054E0 /* Profile.swift */; };
+		CF9CFF19283F9AA1004054E0 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF9CFF18283F9AA1004054E0 /* CustomError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		CF9CFEF0283F9597004054E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CF9CFEF3283F9597004054E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CF9CFEF5283F9597004054E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CF9CFF00283F975B004054E0 /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		CF9CFF03283F976B004054E0 /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		CF9CFF06283F97A3004054E0 /* ProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
+		CF9CFF0B283F97F9004054E0 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		CF9CFF0E283F9804004054E0 /* ProfileService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
+		CF9CFF12283F99E5004054E0 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		CF9CFF15283F9A84004054E0 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		CF9CFF18283F9AA1004054E0 /* CustomError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,79 @@
 		CF9CFEE6283F9595004054E0 /* APIDemo */ = {
 			isa = PBXGroup;
 			children = (
+				CF9CFF11283F99D7004054E0 /* Extensions */,
+				CF9CFF0A283F97EA004054E0 /* Helper */,
+				CF9CFF09283F97DA004054E0 /* Service */,
+				CF9CFEFF283F9746004054E0 /* ViewModel */,
+				CF9CFEFE283F973C004054E0 /* Controller */,
+				CF9CFEFD283F9733004054E0 /* Model */,
+				CF9CFEFC283F9728004054E0 /* View */,
 				CF9CFEE7283F9595004054E0 /* AppDelegate.swift */,
 				CF9CFEE9283F9595004054E0 /* SceneDelegate.swift */,
-				CF9CFEEB283F9595004054E0 /* ViewController.swift */,
-				CF9CFEED283F9595004054E0 /* Main.storyboard */,
 				CF9CFEF0283F9597004054E0 /* Assets.xcassets */,
-				CF9CFEF2283F9597004054E0 /* LaunchScreen.storyboard */,
 				CF9CFEF5283F9597004054E0 /* Info.plist */,
 			);
 			path = APIDemo;
+			sourceTree = "<group>";
+		};
+		CF9CFEFC283F9728004054E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CF9CFEED283F9595004054E0 /* Main.storyboard */,
+				CF9CFEF2283F9597004054E0 /* LaunchScreen.storyboard */,
+				CF9CFF00283F975B004054E0 /* ProfileTableViewCell.swift */,
+				CF9CFF03283F976B004054E0 /* ProfileTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CF9CFEFD283F9733004054E0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CF9CFF15283F9A84004054E0 /* Profile.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CF9CFEFE283F973C004054E0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF9CFEEB283F9595004054E0 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CF9CFEFF283F9746004054E0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				CF9CFF06283F97A3004054E0 /* ProfileViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CF9CFF09283F97DA004054E0 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CF9CFF0E283F9804004054E0 /* ProfileService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		CF9CFF0A283F97EA004054E0 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				CF9CFF18283F9AA1004054E0 /* CustomError.swift */,
+				CF9CFF0B283F97F9004054E0 /* NetworkManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		CF9CFF11283F99D7004054E0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CF9CFF12283F99E5004054E0 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +205,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF9CFEF4283F9597004054E0 /* LaunchScreen.storyboard in Resources */,
+				CF9CFF04283F976B004054E0 /* ProfileTableViewCell.xib in Resources */,
 				CF9CFEF1283F9597004054E0 /* Assets.xcassets in Resources */,
 				CF9CFEEF283F9595004054E0 /* Main.storyboard in Resources */,
 			);
@@ -137,9 +218,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF9CFF0C283F97F9004054E0 /* NetworkManager.swift in Sources */,
 				CF9CFEEC283F9595004054E0 /* ViewController.swift in Sources */,
+				CF9CFF01283F975B004054E0 /* ProfileTableViewCell.swift in Sources */,
+				CF9CFF13283F99E5004054E0 /* Extensions.swift in Sources */,
 				CF9CFEE8283F9595004054E0 /* AppDelegate.swift in Sources */,
+				CF9CFF19283F9AA1004054E0 /* CustomError.swift in Sources */,
 				CF9CFEEA283F9595004054E0 /* SceneDelegate.swift in Sources */,
+				CF9CFF07283F97A3004054E0 /* ProfileViewModel.swift in Sources */,
+				CF9CFF16283F9A84004054E0 /* Profile.swift in Sources */,
+				CF9CFF0F283F9804004054E0 /* ProfileService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
